@@ -1,0 +1,21 @@
+Casino\Views
+Casino\Domain\Games\Blackjack
+Casino\Domain\Games\Roulette
+Casino\Domain\Common
+Casino\Tests\
+Casino\Tests\Games\Blackjack
+Casino\Tests\Games\Roulette
+Casino\Tests\Common
+
+Donc dans common on met ce qui n'est pas spécifique à roulette ou blackjack
+Dans views on met les templates
+NB : on décide arbitrairement que TOUS LES FICHIERS D'UN MÊME RÉPERTOIRE ONT LE MÊME NAMESPACE
+
+Donc dans tous les fichiers du répertoire Common j'aurais à la première ligne namespace Casino\Domain\Common;
+
+Et dernier point technique :
+Pour utiliser une fonction d'un namespace il faut utiliser use de cette manière là :
+use function Casino\Domain\Common\isOdd;
+Et ensuite dans le code on peut appeler isOdd directement
+Sinon appeler directement la fonction avec son namespace complet mais c'est un peu casse pied à lire et à écrire
+
